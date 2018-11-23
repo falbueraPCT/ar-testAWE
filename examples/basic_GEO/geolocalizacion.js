@@ -2,7 +2,7 @@ var map, infoWindow;
 
 function initMap() {
 
-    map = new google.maps.Map(document.getElementById('map'), { center: {lat: -34.397, lng: 150.644}, zoom: 5 });
+    map = new google.maps.Map(document.getElementById('map'), { center: {lat: -34.397, lng: 150.644}, zoom: 14 });
 
     infoWindow = new google.maps.InfoWindow;
 
@@ -23,6 +23,7 @@ function initMap() {
         });
         */
         var watchID = navigator.geolocation.watchPosition(function(position) {
+            new_place = true;
             pos = { lat: position.coords.latitude, lng: position.coords.longitude };
             console.log('POS LAT --> ' + pos.lat);
             console.log('POS LNG --> ' + pos.lng);            

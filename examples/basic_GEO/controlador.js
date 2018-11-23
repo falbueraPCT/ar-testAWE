@@ -66,6 +66,8 @@ window.addEventListener('load', function() {
                         });
                     }, false);
                     
+                    
+                    
                     // add some points of interest (poi) for each of the compass points
                     awe.pois.add({ id:'north', position: { x:0, y:0, z:200 } });
                     awe.pois.add({ id:'north_east', position: { x:200, y:0, z:200 } });
@@ -101,7 +103,12 @@ window.addEventListener('load', function() {
                         material:{ type: 'phong', color:0x0000FF } }, 
                     { poi_id: 'amposta' });
                     
-                    awe.povs.update({ data: { position: { x: current_lat * scale, y: 0, z: current_lng * scale } }, where: { id: 'default' } });
+                    if (new_place){
+                        awe.povs.update({ data: { position: { x: current_lat * scale, y: 0, z: current_lng * scale } }, where: { id: 'default' } });
+                        new_place = false;
+                    }
+                    
+                    
                    
                     var test1 = awe.pois.list();
                     var test2 = awe.pov().position;
