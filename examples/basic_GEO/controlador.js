@@ -83,12 +83,13 @@ window.addEventListener('load', function() {
                     lat = 41.104648;
                     lng = 1.145089;       
                     
-                  
+                    console.log('pos de geo.js --> ' + pos.lat + ' ' + pos.lng);
+                    
                     var current_lat;
                     var current_lng;
                     
-                    current_lat = 41.1287552;
-                    current_lng = 1.2419072;                    
+                    current_lat = pos.lat;
+                    current_lng = pos.lng;                    
        
                     var scale = 10000;
                     awe.pois.add({ id:'amposta', position: { x: lat * scale, y: 0, z: lng * scale } });
