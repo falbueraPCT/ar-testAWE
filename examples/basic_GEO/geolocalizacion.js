@@ -19,6 +19,10 @@ function initMap() {
         }, function() {
                 handleLocationError(true, infoWindow, map.getCenter());
         });
+        
+        var watchID = navigator.geolocation.watchPosition(function(position) {
+            console.log('update pos --> ' + position.coords.latitude, position.coords.longitude);
+        });
     } else {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
