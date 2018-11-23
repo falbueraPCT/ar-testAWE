@@ -79,10 +79,11 @@ window.addEventListener('load', function() {
                     var lat;
                     var lng;
                     
-                    // test coor Amposta
-                    lat = 40.7079905;
-                    lng = 0.5827636;       
+                    // test coor 
+                    lat = 41.104648;
+                    lng = 1.145089;       
                     
+                  
                     var current_lat;
                     var current_lng;
                     
